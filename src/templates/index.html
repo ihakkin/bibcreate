@@ -8,6 +8,17 @@ bibcreate
 
 <h2>bibcreate</h2>
 
+<form action="/create_reference" method="post">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  
 
 <h3>Book Citations</h3>
     <table border="1">

@@ -24,8 +24,9 @@ def reference_creation():
 
 
     try:
-        #validate_todo(content)
+        validate_reference(title, author, year, publisher, ISBN )
         create_reference(ref_type, title, author, year, publisher, ISBN )
+        flash("Book citation added successfully", "success") 
         return redirect("/")
     except Exception as error:
         flash(str(error))
