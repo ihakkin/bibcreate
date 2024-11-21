@@ -27,11 +27,11 @@ https://docs.google.com/spreadsheets/d/1VMvwVkrx3sCwMhOg9KaBRGVdFl2taQKhlVoZCgXN
 
 SSH
 ```
-git clone git@github.com:ranilar/BibCreate.git
+git clone git@github.com:ihakkin/bibcreate.git
 ```
 HTTPS
 ```
-git clone https://github.com/ranilar/BibCreate.git
+git clone https://github.com/ihakkin/bibcreate.git
 ```
 
 #### 2. Navigate to the project directory.
