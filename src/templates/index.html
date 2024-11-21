@@ -1,34 +1,37 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Todo app
+bibcreate
 {% endblock %}
 
 {% block body %}
 
-<h2>Todo app</h2>
+<h2>bibcreate</h2>
+
+
+<h3>Book Citations</h3>
+    <table border="1">
+        <tr>
+            <th>Type</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Publisher</th>
+            <th>ISBN</th>
+        </tr>
+        {% for reference in references %}
+        <tr>
+            <td>{{ reference.ref_type }}</td>
+            <td>{{ reference.title }}</td>
+            <td>{{ reference.author }}</td>
+            <td>{{ reference.year }}</td>
+            <td>{{ reference.publisher }}</td>
+            <td>{{ reference.ISBN }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
 <div>
-  things still unfinished: {{ unfinished }}
+  <a href="/new_reference">Create a new reference</a>
 </div>
-
-<ul>
-  {% for todo in todos %}
-    <li style="display: flex">
-      <div>
-        {{ todo }} 
-      </div>
-      {% if not todo.done %}
-        <form action="/toggle_todo/{{ todo.id }}" method="post" style="margin-left: 10px;">
-          <button type="submit">mark as done</button>
-        </form>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-
-<div>
-  <a href="/new_todo">Create new todo</a>
-</div>
-
 {% endblock %}

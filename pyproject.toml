@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "webcntr"
+name = "bibcreate"
 version = "0.1.0"
 description = ""
-authors = ["Matti Luukkainen <mluukkai@iki.fi>"]
+authors = ["idias"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
